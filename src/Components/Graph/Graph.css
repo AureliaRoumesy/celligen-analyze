@@ -1,0 +1,12 @@
+#graphToPrint{
+  width: 950px!important;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.button-upload{
+  display: table;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
