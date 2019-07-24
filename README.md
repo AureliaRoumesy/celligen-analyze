@@ -18,6 +18,6 @@ Run command line :
 and on another terminal window run command line :
 ### `npm start`
 
-Your admin page is ready to use on [http://localhost:3000/](http://localhost:3000/)!!!<br>
+Your application is ready to use on [http://localhost:3000/](http://localhost:3000/)!!!<br>
 Use 'admin@gmail.com' as email and 'admin' as password.<br>
 If you go to the url : [http://localhost:3000/signup](http://localhost:3000/signup) , you can add another adminitrator account.
