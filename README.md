@@ -1,4 +1,4 @@
-#### Application to display graph from Celligen Bioreactor
+#### Application to display graph from Celligen Bioreactor datas
 
 Clone the project.<br>
 Install all dependencies.<br>
