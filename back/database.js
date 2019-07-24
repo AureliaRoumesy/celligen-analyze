@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
-require('dotenv').config()
+require('dotenv').config();
 
-const dbRoute = process.env.MONGO_HOST;
+const authData =  {
+  'user': process.env.MONGODB_USER,
+  'pass': process.env.MONGODB_PASS,
+  'useNewUrlParser': true,
+  'useCreateIndex': true
+}; 
 
 mongoose.connect(
-  dbRoute,
-  { useNewUrlParser: true }
+  process.env.MONGODB_URI,
+  authData,
 );
 
 let db = mongoose.connection;

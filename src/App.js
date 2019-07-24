@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
 import axios from 'axios';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import ManipList from './Components/ManipList/ManipList';
-import Upload from './Components/Upload/Upload';
-import Menu from './Components/Menu/Menu';
+import { Route } from 'react-router-dom';
+import { message } from 'antd';
+import { tokenApprovedTrueAction } from './Actions/tokenAction';
+import conf from './app.conf';
 import Graph from './Components/Graph/Graph';
 import Login from './Components/Login/Login';
+import ManipList from './Components/ManipList/ManipList';
+import Menu from './Components/Menu/Menu';
 import SignUp from './Components/SignUp/SignUp';
+import Upload from './Components/Upload/Upload';
 import setHeaderToken from './Utils/tokenUtil';
-import conf from './app.conf';
 
-import { tokenApprovedTrueAction } from './Actions/tokenAction';
 
 function App({ tokenApproved, dispatch }) {
   useEffect(() => {
@@ -24,8 +25,8 @@ function App({ tokenApproved, dispatch }) {
             localStorage.removeItem('id_token');
           }
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          message.error("Problème lors de l'authentification", 3);
         });
     });
   }, []);

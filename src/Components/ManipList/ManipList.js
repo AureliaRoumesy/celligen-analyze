@@ -22,8 +22,8 @@ function ManipList(props) {
     setHeaderToken(() => {
       axios.get(`${conf.url}/manip/`)
         .then(data => {
-          props.dispatch(addManipList(data.data))
-          setManipList(data.data)
+          props.dispatch(addManipList(data.data));
+          setManipList(data.data);
         })
         .catch(() => {
           message.error('Problem when retrieving data. Please refresh the page', 3);
@@ -39,7 +39,7 @@ function ManipList(props) {
             const arrayTemp = [...manipList];
             arrayTemp.splice(index, 1);
             setManipList(arrayTemp);
-            message.success("succesfully deleted", 3);
+            message.success('succesfully deleted', 3);
           }
         })
         .catch(() => {
@@ -58,36 +58,36 @@ function ManipList(props) {
   };
 
   return (
-    <div className="container" >
-      <h4>Liste des manip</h4>
-      <ul className="collection with-header">
-        <li className="collection-header row center-align text-white light-green darken-1">
-          <p className="col s3" style={{ color: 'white' }} onClick={() => filterManips('name', [filterName, setFilterName])}>Nom de la manip</p>
-          <p className="col s3" style={{ color: 'white' }} onClick={() => filterManips('dateStart', [filterDate, setFilterDate])}>Date début de manip</p>
-          <p className="col s3" style={{ color: 'white' }} onClick={() => filterManips('finish', [filterStatus, setFilterStatus])}>Status</p>
-          <p className="col s3" style={{ color: 'white' }}>Graph</p>
+    <div className='container' >
+      <h4 style= {{ textAlign: 'center' }}>Liste des manip</h4>
+      <ul className='collection with-header'>
+        <li className='collection-header row center-align text-white light-green darken-1'>
+          <p className='col s3' style={{ color: 'white' }} onClick={() => filterManips('name', [filterName, setFilterName])}>Nom de la manip</p>
+          <p className='col s3' style={{ color: 'white' }} onClick={() => filterManips('dateStart', [filterDate, setFilterDate])}>Date début de manip</p>
+          <p className='col s3' style={{ color: 'white' }} onClick={() => filterManips('finish', [filterStatus, setFilterStatus])}>Status</p>
+          <p className='col s3' style={{ color: 'white' }}>Graph</p>
         </li>
         {manipList.length && manipList.map((manip, index) => (
           <div key={index}>
-            <li className="collection-item row center-align" >
-              <p className="col s3">{manip.name}</p>
-              <p className="col s3">{moment(manip.dateStart).format('ll')}</p>
-              <p className="col s3">{manip.finish ? 'Finie' : 'En cours'}</p>
-              <p className="col s3">
+            <li className='collection-item row center-align' >
+              <p className='col s3'>{manip.name}</p>
+              <p className='col s3'>{moment(manip.dateStart).format('ll')}</p>
+              <p className='col s3'>{manip.finish ? 'Finie' : 'En cours'}</p>
+              <p className='col s3'>
                 <Link
-                  className="waves-effect waves-light btn-small light-green darken-1"
+                  className='waves-effect waves-light btn-small light-green darken-1'
                   style={{ textdecoration: 'none', color: 'white' }}
                   to={{
                     pathname: '/graph',
                     search: `id=${manip._id}`,
-                  }}><i className="material-icons">show_chart</i>
+                  }}><i className='material-icons'>show_chart</i>
                 </Link>
                 <button
-                  type="button"
-                  className="waves-effect waves-light btn-small light-green darken-1 right"
+                  type='button'
+                  className='waves-effect waves-light btn-small light-green darken-1 right'
                   onClick={() => handleDelete(index)}
                 >
-                  <i className="material-icons">delete</i>
+                  <i className='material-icons'>delete</i>
                 </button>
               </p>
             </li>
@@ -99,4 +99,3 @@ function ManipList(props) {
 }
 
 export default connect()(ManipList);
-

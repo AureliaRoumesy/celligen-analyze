@@ -34,39 +34,39 @@ function Login({ dispatch }) {
   };
 
   return (
-    <div className="valign-wrapper">
-      <div className="centerLogin">
+    <div className='valign-wrapper'>
+      <div className='centerLogin'>
         <h2>Celligen Analyze</h2>
 
-        <div className="row">
-          <div className="input-field col s6">
+        <div className='row'>
+          <div className='input-field col s6'>
             <input
-              id="emailSignIn"
-              type="email"
+              id='emailSignIn'
+              type='email'
               value={emailSignIn}
               onChange={event => setEmailSignIn(event.target.value)}
               required
-              className="validate"
+              className='validate'
             />
-            <label htmlFor="emailSignIn">Email</label>
+            <label htmlFor='emailSignIn'>Email</label>
           </div>
-          <div className="input-field col s6">
+          <div className='input-field col s6'>
             <input
-              id="passwordSignIn"
-              type="password"
+              id='passwordSignIn'
+              type='password'
               value={passwordSignIn}
               onChange={event => setPasswordSignIn(event.target.value)}
               required
-              className="validate"
+              className='validate'
             />
-            <label htmlFor="passwordSignIn">Mot de passe</label>
+            <label htmlFor='passwordSignIn'>Mot de passe</label>
           </div>
         </div>
-        <div className="input-field row loginButton">
+        <div className='input-field row loginButton'>
           <button
-            type="button"
+            type='button'
             style={{ margin: 'auto' }}
-            className="waves-effect waves-light btn-small light-green darken-1 white-text col s2 offset-s3"
+            className='waves-effect waves-light btn-small light-green darken-1 white-text col s2 offset-s3'
             onClick={handleSendSignIn}
           >
             Se connecter

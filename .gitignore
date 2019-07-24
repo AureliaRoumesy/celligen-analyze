@@ -9,4 +9,4 @@ api/.password.js
 # JWT keys
 back/.private.key
 back/.public.key
-back/.env
+.env

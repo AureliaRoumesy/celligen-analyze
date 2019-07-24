@@ -29,48 +29,48 @@ function SignUp() {
   };
 
   return (
-    <div className="valign-wrapper">
-      <div className="centerLogin">
+    <div className='valign-wrapper'>
+      <div className='centerLogin'>
         <h3>Enregistrement nouvel admin</h3>
-        <div className="row">
-          <div className="input-field col s4">
+        <div className='row'>
+          <div className='input-field col s4'>
             <input
-              id="nameSignUp"
-              type="text"
+              id='nameSignUp'
+              type='text'
               value={nameSignUp}
               onChange={event => setNameSignUp(event.target.value)}
               required
-              className="validate"
+              className='validate'
             />
-            <label htmlFor="nameSignUp">Nom</label>
+            <label htmlFor='nameSignUp'>Nom</label>
           </div>
-          <div className="input-field col s4">
+          <div className='input-field col s4'>
             <input
-              id="emailSignUp"
-              type="email"
+              id='emailSignUp'
+              type='email'
               value={emailSignUp}
               onChange={event => setEmailSignUp(event.target.value)}
               required
-              className="validate"
+              className='validate'
             />
-            <label htmlFor="emailSignUp">Email</label>
+            <label htmlFor='emailSignUp'>Email</label>
           </div>
-          <div className="input-field col s4">
+          <div className='input-field col s4'>
             <input
-              id="passwordSignUp"
-              type="password"
+              id='passwordSignUp'
+              type='password'
               value={passwordSignUp}
               onChange={event => setPasswordSignUp(event.target.value)}
               required
-              className="validate"
+              className='validate'
             />
-            <label htmlFor="passwordSignUp">mot de passe</label>
+            <label htmlFor='passwordSignUp'>mot de passe</label>
           </div>
         </div>
-        <div className="input-field row loginButton">
+        <div className='input-field row loginButton'>
           <button
-            type="button"
-            className="waves-effect waves-light btn-small light-green darken-1 white-text col s2 offset-s3"
+            type='button'
+            className='waves-effect waves-light btn-small light-green darken-1 white-text col s2 offset-s3'
             onClick={handleSendSignUp}
           >
             Envoyer
