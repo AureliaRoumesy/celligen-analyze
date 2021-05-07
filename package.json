@@ -31,7 +31,7 @@
     "recharts": "^1.6.2",
     "redux": "^4.0.1",
     "toasted-notes": "^2.1.6",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
